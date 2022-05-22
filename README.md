@@ -21,4 +21,22 @@ adjacent intersections is the same throughout the grid.
 
 - The file grids.txt contains five grids with different start and goal locations and traffic jams. The grids are represented as Java arrays filled with integers, where each integer represents one intersection. 0 means the intersection is clear, 1 represents a traffic jam, 2 represents the starting point, and 3 represents the goal.
 
-- 
+- To implement iterative deepening, you will first need to represent a search node. A search node should contain three integers: the x and y location, and the depth of the node in the search tree. The x and y location are used to index into the grid arrays. For example, grid1[2][3]==2, so the first node when searching in grid1 should have x=2, y=3 and depth=0.
+
+The implementation is in Java, and (assuming you’re using an object-oriented language) includes the following classes and methods:
+
+A class called SearchNode with the following data and methods:
+- The integers x, y, and depth, as described above. 
+- A suitable constructor.
+-	An equals method that compares the SearchNode with another object and returns true when they are of the same type and have the same state (the depth is not part of the state).
+-	An expand method that creates the neighbours of the SearchNode. 
+-	You may wish to implement the toString method (or the equivalent in your chosen language) to allow SearchNodes to be printed out conveniently. 
+
+A class called IDSearch with the following methods:
+-	A method called iterativeDeepening that contains the main loop of the iterative deepening algorithm (i.e. the loop that calls depthLimitedSearch repeatedly with increasing depth limits). 
+-	A method called depthLimitedSearch that implements a depth-first graph search with a depth limit. 
+-	A main method to start the program (or the equivalent in your chosen language). 
+
+The depthLimitedSearch method will need data structures for the following:
+-	The frontier;
+-	All nodes generated within the current depth-first search (the explored set).
