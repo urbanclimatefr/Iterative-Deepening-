@@ -16,6 +16,7 @@ The prototype system will be tested in Manhattan. The streets of Manhattan are
 famously laid out on a grid. Suppose we have a grid with 15 streets running North-South,
 and 15 streets running East-West, as in the picture below. The distance between two
 adjacent intersections is the same throughout the grid.
+![image](https://user-images.githubusercontent.com/60503179/169689259-17285a6b-57cb-433a-ae49-d8a0bdc252f4.png)
 
 - The file grids.txt contains five grids with different start and goal locations and traffic jams. The grids are represented as Java arrays filled with integers, where each integer represents one intersection. 0 means the intersection is clear, 1 represents a traffic jam, 2 represents the starting point, and 3 represents the goal.
 
